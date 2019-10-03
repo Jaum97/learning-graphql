@@ -1,0 +1,18 @@
+type User {
+	id: ID!
+	name: String!
+	email: String!
+}
+
+type Query {
+	users: [User!]!
+	user(id: ID!): User
+}
+
+# [User!] all returns inside array must be of type user
+
+# [User]! always returns an array, even if empty
+
+type Mutation {
+	createUser(name: String!, email: String!): User
+}
