@@ -1,0 +1,3 @@
+generates:
+  server-types.ts:
+    - typescript
