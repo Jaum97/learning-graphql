@@ -9,3 +9,18 @@ query GetPerson {
     avatar(size: LARGE)
   }
 }
+
+{
+  search(text: "an") {
+    __typename
+    ... on Human {
+      name
+    }
+    ... on Droid {
+      name
+    }
+    ... on Starship {
+      name
+    }
+  }
+}
